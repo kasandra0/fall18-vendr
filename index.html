@@ -6,13 +6,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Vendr</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
 </head>
 
 <body>
-  <h1>CHANGE: <span id='change'>0.00</span></h1>
-  <button onclick="app.controllers.vendController.addQuarter()">Add Quarter</button>
-  <div id="products">
+  <div class="container">
+    <div class="row">
+      <div class="col-4">
+        <h1>You've inserted: $ <span id='change'>0.00</span></h1>
+        <button onclick="app.controllers.vendController.addQuarter()">Add Quarter</button>
+        <!-- WIRE THIS PUPPY UP! -->
+        <button onclick="app.controllers.vendController.dispenseChange()">Dispense Change</button>
+        <p>Total Sales Today: $ <span id='total-sales'>0.00</span></p>
+      </div>
+      <div class="col-4">
+        <div id="products">
+        </div>
+      </div>
+      <div class="col-4" id="current-transaction">
 
+      </div>
+    </div>
   </div>
 
   <!-- Links app from main.js -->
